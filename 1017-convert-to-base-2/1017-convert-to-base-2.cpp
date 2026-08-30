@@ -3,14 +3,18 @@ public:
     string baseNeg2(int n) {
         if (n == 0) return "0";
         
-        string result = "";
+        string baseVal = "";
+
         while (n != 0) {
-            int remainder = ((n % 2) + 2) % 2;  
-            result += to_string(remainder);
-            n = (n - remainder) / -2;
+            int rem = n % 2 == 0? 0: 1;
+            char remCh = '0' + rem;
+            baseVal = baseVal + "" + remCh;
+
+            n = (rem - n) / 2;
         }
-        
-        reverse(result.begin(), result.end());
-        return result;
+
+        reverse(baseVal.begin(), baseVal.end());
+
+        return baseVal;
     }
 };
