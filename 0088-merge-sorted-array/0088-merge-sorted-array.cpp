@@ -13,6 +13,7 @@ public:
 
             else {
                 nums1[k--]=nums2[j--];
+                /// last se first tak fill karte jaye gee.. heehee simple
             }
 
          }
